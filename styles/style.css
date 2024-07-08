@@ -184,7 +184,7 @@ p:last-child {
   z-index: 1;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #0606a8;
+  background-color: #a88a06;
   transition: 0.5s;
   border-radius: 25px;
   font-weight: 600;
@@ -194,13 +194,35 @@ p:last-child {
   padding-top: 17px;
   padding-bottom: 13px;
 }
+
+.default-btn-course:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: red;
+  transition: width 0.5s;
+  z-index: -1;
+}
+
+.default-btn-course:hover:after {
+  width: 100%;
+}
+
+.default-btn-course:hover {
+  color: #000000; /* Ensures text color stays white */
+}
+
+
 .default-btn-mocktest {
   border: none;
   position: relative;
   display: inline-block;
   text-align: center;
   overflow: hidden;
-  z-index: 1;
+  z-index: -1;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #5208fed2;
@@ -212,8 +234,23 @@ p:last-child {
   padding-right: 35px;
   padding-top: 17px;
   padding-bottom: 13px;
+  transition: all 0.3s ease-in-out
 }
+
 .default-btn span {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: #fa7070;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.default-btn-course span {
   position: absolute;
   display: block;
   width: 0;

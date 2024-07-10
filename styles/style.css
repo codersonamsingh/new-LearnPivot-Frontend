@@ -184,7 +184,7 @@ p:last-child {
   z-index: 1;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #a88a06;
+  background-color: #6706a8;
   transition: 0.5s;
   border-radius: 25px;
   font-weight: 600;
@@ -222,20 +222,31 @@ p:last-child {
   display: inline-block;
   text-align: center;
   overflow: hidden;
-  z-index: -1;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #5208fed2;
-  transition: 0.5s;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
   border-radius: 25px;
   font-weight: 600;
   font-size: 20px;
-  padding-left: 35px;
-  padding-right: 35px;
-  padding-top: 17px;
-  padding-bottom: 13px;
-  transition: all 0.3s ease-in-out
+  padding: 17px 35px 13px;
 }
+
+.default-btn-mocktest:hover {
+  background-color: #06c44fd2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #141314; /* Change text color on hover */
+}
+
+
+.default-btn-mocktest:hover {
+  background-color: #be7335d2;
+}
+
+.default-btn-mocktest:hover:before {
+  transform: scaleX(1);
+}
+
 
 .default-btn span {
   position: absolute;
